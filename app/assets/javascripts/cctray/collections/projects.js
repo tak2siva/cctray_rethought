@@ -16,7 +16,7 @@ App.Collections.Projects = Backbone.Collection.extend({
 			return x>y ? 1 : -1;
 		};
 		var pipeline_stages = _.filter(this.models, function(model) {
-			return model.get('name').split(' :: ').length<=2;
+			return model.get('name').split(' :: ').length<=2 && /merchandise|cost|geco|e2e_article|e2e_common/i.test(model.get('name').split(' :: '));
 		});
 		var pipelines = _.groupBy(pipeline_stages, function(model) {
 			return model.get('name').split(' :: ')[0];
