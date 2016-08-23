@@ -1,2 +1,2 @@
 urls:
-    cctray: 'http://admin:Helpdesk@y-ci-master.dnspam:8153/'
+    cctray: "http://y-ci-master.dnspam/"
